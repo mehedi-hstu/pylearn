@@ -34,7 +34,7 @@ jobs:
                     <script src='https://cdn.tailwindcss.com'></script>
                     <script src='https://unpkg.com/@headlessui/react'></script>
                     <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' rel='stylesheet'>
-                    <script type="text/javascript">
+                    <script type='text/javascript'>
                       var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
                       (function() {
                           var s1 = document.createElement('script'), s0 = document.getElementsByTagName('script')[0];
@@ -45,7 +45,6 @@ jobs:
                           s0.parentNode.insertBefore(s1, s0);
                       })();
                     </script>
-
                   </head>
                   <body class='bg-gray-100 font-inter p-8'>
                     <div class='container mx-auto'>
@@ -103,7 +102,7 @@ jobs:
 
 
             echo "<div>
-            <script type="text/javascript">
+            <script type='text/javascript'>
               function googleTranslateElementInit() {
               new google.translate.TranslateElement(
                       {pageLanguage: 'en'},
@@ -113,10 +112,10 @@ jobs:
               </script>
               <script
                 async
-                type="text/javascript"
-                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+                type='text/javascript'
+                src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
               ></script>
-              <div id="google_translate_element">
+              <div id='google_translate_element'>
               </div>
             " >> "$html_file"
 
