@@ -1,47 +1,32 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
   <url>
-    <loc>https://hasanshahriar32.github.io/ads/1.fundamental/functions.html</loc>
+    <loc>https://hasanshahriar32.github.io/pylearn/fundamental/cheatsheet/cheatsheet.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hasanshahriar32.github.io/ads/1.fundamental/lists.html</loc>
+    <loc>https://hasanshahriar32.github.io/pylearn/fundamental/notes/template.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hasanshahriar32.github.io/ads/1.fundamental/numpy.html</loc>
+    <loc>https://hasanshahriar32.github.io/pylearn/fundamental/setup.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hasanshahriar32.github.io/ads/2.intermediate-python/cheatsheet/cheatsheet.html</loc>
+    <loc>https://hasanshahriar32.github.io/pylearn/index.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hasanshahriar32.github.io/ads/2.intermediate-python/notes/dictionaries_&_pandas.html</loc>
+    <loc>https://hasanshahriar32.github.io/pylearn/template/cheatsheet/cheatsheet.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://hasanshahriar32.github.io/ads/2.intermediate-python/notes/matplotlib.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hasanshahriar32.github.io/ads/index.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hasanshahriar32.github.io/ads/template/cheatsheet/cheatsheet.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://hasanshahriar32.github.io/ads/template/notes/template.html</loc>
+    <loc>https://hasanshahriar32.github.io/pylearn/template/notes/template.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
