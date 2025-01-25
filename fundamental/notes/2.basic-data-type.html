@@ -4,7 +4,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>1.about</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2.basic-data-type</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7518,37 +7518,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="About-Python-%F0%9F%90%8D">About Python 🐍<a class="anchor-link" href="#About-Python-%F0%9F%90%8D">¶</a></h1><h2 id="What-is-Python?">What is Python?<a class="anchor-link" href="#What-is-Python?">¶</a></h2><p>Python is a programming language created by Guido Van Rossum in the late 1980s.</p>
-<p>You might be surprised to learn that Python is 30 years old!
-Where is it used?</p>
-<p>A common misconception is that Python is a scripting language. It’s used at companies from Reddit, to Netflix, to Dropbox.
-What’s all this about Python 2 vs Python 3</p>
-<p>This part is a bit of a stain on Python’s history. Python 3 was released 2008, and its adoption was slow. First and foremost because it took popular packages a fair amount of time to port over their code.</p>
-<p>This debate is now over. Python 2 will reach end-of-life in 2020, meaning that important updates - including security updates - will stop being released. That’s why this course focuses on Python3 only.
-Why Python?</p>
-<p>Python the language is open source.</p>
-<p>Python has a wide variety of applications such as:</p>
-<pre><code>AI/ML
-    SciPi
-    NumPy
-    Pandas
-    PyTorch
-Hardware &amp; Micro-controllers
-    Raspberry Pi
-    MicroPython
-    CircuitPython
-Web Development
-    Django
-    Flask
-Scripting
-    DevOps Configuration scripts</code></pre>
-<p>Python has an incredibly rich fully featured standard library, as well as the PyPI Package Index for 3rd party packages, which as of February 2019 contains 167,107 packages.</p>
-<p>Python is considered to be a “batteries included” language, because the standard library contains a majority of the libraries and packages you’ll need in a standard application.
-Continuing In The Community</p>
-<p>The absolute best part about Python is the incredibly supportive community.</p>
-<p>The biggest yearly conference is PyCon US with approximately 4000 attendees.</p>
-<p>There are many local user groups worldwide, with many listed on this wiki.</p>
-<p>There are many supportive groups for women and non-binary developers, such as PyLadies and DjangoGirls. These organizations have chapters in most major cities.</p>
+<h1 id="Naming-Variables">Naming Variables<a class="anchor-link" href="#Naming-Variables">¶</a></h1><p>Python variables can’t start with a number. In general, they’re named all lower case, separated by underscores. Unlike other languages, that name their variables with camelCase.</p>
+<p>You don’t want to name your variables the same as the types that we’ll be working with. For example don’t name your variables int, list, dict. Etc.</p>
 </div>
 </div>
 </div>
@@ -7559,7 +7530,40 @@ Continuing In The Community</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Conventions">Conventions<a class="anchor-link" href="#Conventions">¶</a></h2><h3 id="PEP8">PEP8<a class="anchor-link" href="#PEP8">¶</a></h3><p>PEP8 is a Python coding standard, that sets guidelines for how our Python code should look like.</p>
+<h2 id="Variables">Variables<a class="anchor-link" href="#Variables">¶</a></h2><p>Variables in Python allow us to store information and give it a label that we can use to retrieve that information later. We can use variables to store numbers, strings (a sequence of characters), or even more complex data types like lists and dictionaries.</p>
+<p>We assign values to variables by putting the value to the right of an equal sign.</p>
+<p>Because Python is a dynamic language, we don’t need to declare the type of the variables before we store data in them.</p>
+<p>That means that this is valid Python code:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>x = 42</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Unlike typed languages, the type of what’s contained in Python variables can change at any time.</p>
+<p>For example, the below is perfectly valid Python code:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>x = 42
+x = "hello"</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Here, the value of the variable x changed from a number to a string.</p>
+<p>When creating variables, there are a few best practices you should follow.
+Naming Variables</p>
+<p>Convention says that variables should be named in lowercase, with whole words separated by underscores.</p>
+<p>If you want to learn more about Python naming conventions look at PEP8 during a break.</p>
+<p>Because Python is a dynamic language and you don’t have type hints to explain what’s stored inside a variable while reading code, you should do your best naming your variables to describe what is stored inside of them.</p>
+<p>It’s ok to be verbose. For example, n is a poor variable name, while numbers is a better one. If you’re storing a collection of items, name your variable as a plural.</p>
+<p>Learn more about great naming practices for dynamic types by watching this 30-minute talk by Brandon Rhodes.
+Naming Gotchas</p>
+<p>There are some things that you can’t name your variables, such as and, if, True, or False. That’s because Python uses these names for program control structure.</p>
+<p>You can’t start your variable name with a digit, although your variable name can end in a digit. Your variable name can’t contain special characters, such as !, @, #, $, % and more.</p>
+<p>💣 Python will let you override built-in methods and types without a warning so don’t name your Python variables things like list, str, or int.</p>
+<p>If you notice your program behaving oddly and you can’t find the source of the bug, double check the list of built-in functions and built-in types to make sure that your variable names don’t conflict.</p>
 </div>
 </div>
 </div>
@@ -7570,7 +7574,107 @@ Continuing In The Community</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Anatomy-of-a-Python-Program">Anatomy of a Python Program<a class="anchor-link" href="#Anatomy-of-a-Python-Program">¶</a></h2><p><a href="https://www.learnpython.dev/02-introduction-to-python/010-best-practices/01-anatomy-of-a-python-program/">Python program anatomy</a></p>
+<h2 id="Types">Types<a class="anchor-link" href="#Types">¶</a></h2><p>Python has a very easy way of determining the type of something, with the type() function.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span><span class="w"> </span><span class="err">'</span><span class="nc">int</span><span class="s1">'&gt;</span>
+</pre></div>
+<p>No-Value, None, or Null Value</p>
+<p>There’s a special type in Python that signifies no value at all. In other languages, it might be called Null. In Python, it’s called None.</p>
+<p>If you try to examine a variable on the REPL that’s been set to None, you won’t see any output. We’ll talk more about the None type later in the class.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Numbers">Numbers<a class="anchor-link" href="#Numbers">¶</a></h1><p>First, open up the REPL.</p>
+<blockquote>
+<p>Remember, you’ll learn best if you type along with me.</p>
+</blockquote>
+<p>There are three different types of numbers in Python: int for Integer, Float, and Complex.</p>
+<div class="highlight"><pre><span></span><span class="c1"># These are all integers</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mi">193394</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># These are all floats</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">5.0</span>
+<span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3983.2</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mf">0.</span>
+
+<span class="c1"># This is a complex number</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">42</span><span class="n">j</span>
+</pre></div>
+<p>In Python, Integers and other simple data types are just objects under the hood. That means that you can create new ones by calling methods. You can provide either a number, or a string. This will come in handy later on in the course.</p>
+<p>x = int(4)
+y = int('4')
+z = float(5.0)</p>
+<p>Python also provides a decimal library, which has certain benefits over the float datatype. For more information, refer to the Python documentation.</p>
+<h2 id="Mathematical-Operations">Mathematical Operations<a class="anchor-link" href="#Mathematical-Operations">¶</a></h2><p>Numbers can be added together. If you add a float and an int, the resulting type will be a float.</p>
+<p>If you divide two ints (integers), the result will be of type float.</p>
+<h2 id="Boolean-Types">Boolean Types<a class="anchor-link" href="#Boolean-Types">¶</a></h2><p>In Python, Booleans are of type bool. Surprisingly, the boolean types True and False are also numbers under the hood.</p>
+<pre><code>True is 1 under the hood.
+False is 0 under the hood.</code></pre>
+<p>That means you can do silly things, like add two Boolean numbers together, but I’ll cover why this is a useful Python feature later in the course.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Strings">Strings<a class="anchor-link" href="#Strings">¶</a></h1><h2 id="Representing-Strings">Representing Strings<a class="anchor-link" href="#Representing-Strings">¶</a></h2><p>Strings in Python can be enclosed either with single quotes like 'hello' or double quotes, like "hello".</p>
+<p>Strings can also be concatenated (added together) using the + operator to combine an arbitrary number of Strings. For example:</p>
+<div class="highlight"><pre><span></span><span class="mi">1334</span>
+
+<span class="n">salutation</span> <span class="o">=</span> <span class="s2">"Hello "</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">"Nina"</span>
+<span class="n">greeting</span> <span class="o">=</span> <span class="n">salutation</span> <span class="o">+</span> <span class="n">name</span>
+<span class="c1"># The value of greeting will be "Hello Nina"</span>
+</pre></div>
+<p>To use the same type of quote within a string, that quote needs to be escaped with a \ - backwards slash.</p>
+<div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="o">=</span> <span class="s1">'Hello, it</span><span class="se">\'</span><span class="s1">s Nina'</span>
+</pre></div>
+<p>Alternately, mixed quotes can be present in a Python string without escaping.</p>
+<div class="highlight"><pre><span></span><span class="c1"># Notice that the single quote ' is surrounded by</span>
+<span class="c1"># double quotes, ""</span>
+<span class="n">greeting</span> <span class="o">=</span> <span class="s2">"Hello, it's Nina"</span>
+</pre></div>
+<p>Long multi-line strings can be represented in between """ (triple quotes), but the whitespace will be part of the string.</p>
+<div class="highlight"><pre><span></span><span class="n">long_greeting</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">                Greetings and salutations, dear Nina.</span>
+<span class="s2">                I'm superfluous with my words,</span>
+<span class="s2">                and require more space to say Hello!"</span>
+<span class="s2">                """</span>
+</pre></div>
+<h2 id="Printing-Strings">Printing Strings<a class="anchor-link" href="#Printing-Strings">¶</a></h2><p>Strings can be printed out using the print() function in Python. While you’re working the REPL, you’ll see that variables are displayed for you. When you move on to writing standalone Python programs, that will no longer be the case.</p>
+<p>To use the print() function, call it with a regular or formatted string.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+<span class="n">Hello</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">"Nina"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="n">Nina</span>
+</pre></div>
+<h2 id="String-Formatting">String Formatting<a class="anchor-link" href="#String-Formatting">¶</a></h2><p>There are several types of string formatting in Python.</p>
+<p>If you’re using Python 3.7 and above (remember to check with python --version on the command line) you can use my favorite type of string formatting, and the one I’ll be using for the course called f-strings.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s2">"Nina"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">greeting</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">"</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">Nina</span>
+</pre></div>
+<p>f-strings allow you to simply and easily reference variables in your code, and as a bonus, they’re much faster.</p>
 </div>
 </div>
 </div>
@@ -7582,50 +7686,10 @@ Continuing In The Community</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">A small Python program that uses the GitHub search API to list</span>
-<span class="sd">the top projects by language, based on stars.</span>
-<span class="sd">"""</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-
-<span class="n">GITHUB_API_URL</span> <span class="o">=</span> <span class="s2">"https://api.github.com/search/repositories"</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">create_query</span><span class="p">(</span><span class="n">languages</span><span class="p">,</span> <span class="n">min_stars</span><span class="o">=</span><span class="mi">50000</span><span class="p">):</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"stars:&gt;</span><span class="si">{</span><span class="n">min_stars</span><span class="si">}</span><span class="s2"> "</span>
-
-    <span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
-        <span class="n">query</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"language:</span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> "</span>
-
-    <span class="c1"># a sample query looks like: "stars:&gt;50 language:python language:javascript"</span>
-    <span class="k">return</span> <span class="n">query</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">repos_with_most_stars</span><span class="p">(</span><span class="n">languages</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s2">"stars"</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s2">"desc"</span><span class="p">):</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="n">create_query</span><span class="p">(</span><span class="n">languages</span><span class="p">)</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"q"</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s2">"sort"</span><span class="p">:</span> <span class="n">sort</span><span class="p">,</span> <span class="s2">"order"</span><span class="p">:</span> <span class="n">order</span><span class="p">}</span>
-
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">GITHUB_API_URL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
-    <span class="n">status_code</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
-
-    <span class="k">if</span> <span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"An error occurred. HTTP Code: </span><span class="si">{</span><span class="n">status_code</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">response_json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">response_json</span><span class="p">[</span><span class="s2">"items"</span><span class="p">]</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-    <span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"python"</span><span class="p">,</span> <span class="s2">"javascript"</span><span class="p">,</span> <span class="s2">"ruby"</span><span class="p">]</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">repos_with_most_stars</span><span class="p">(</span><span class="n">languages</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
-        <span class="n">language</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"language"</span><span class="p">]</span>
-        <span class="n">stars</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"stargazers_count"</span><span class="p">]</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"-&gt; </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> repo with </span><span class="si">{</span><span class="n">stars</span><span class="si">}</span><span class="s2"> stars."</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># f string example</span>
+<span class="n">name</span> <span class="o">=</span> <span class="s2">"Eric"</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">74</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">. You are </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7638,38 +7702,57 @@ Continuing In The Community</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>-&gt; public-apis is a Python repo with 325586 stars.
--&gt; system-design-primer is a Python repo with 286962 stars.
--&gt; react is a JavaScript repo with 231646 stars.
--&gt; awesome-python is a Python repo with 231555 stars.
--&gt; Python is a Python repo with 196695 stars.
--&gt; javascript-algorithms is a JavaScript repo with 189658 stars.
--&gt; bootstrap is a JavaScript repo with 171261 stars.
--&gt; AutoGPT is a Python repo with 170835 stars.
--&gt; Python-100-Days is a Python repo with 160142 stars.
--&gt; stable-diffusion-webui is a Python repo with 146329 stars.
--&gt; javascript is a JavaScript repo with 145896 stars.
--&gt; transformers is a Python repo with 137991 stars.
--&gt; youtube-dl is a Python repo with 133822 stars.
--&gt; next.js is a JavaScript repo with 128796 stars.
--&gt; 30-seconds-of-code is a JavaScript repo with 122434 stars.
--&gt; node is a JavaScript repo with 109129 stars.
--&gt; axios is a JavaScript repo with 106213 stars.
--&gt; three.js is a JavaScript repo with 103995 stars.
--&gt; create-react-app is a JavaScript repo with 103037 stars.
--&gt; yt-dlp is a Python repo with 97785 stars.
--&gt; HelloGitHub is a Python repo with 97764 stars.
--&gt; clean-code-javascript is a JavaScript repo with 92278 stars.
--&gt; thefuck is a Python repo with 89469 stars.
--&gt; iptv is a JavaScript repo with 89219 stars.
--&gt; pytorch is a Python repo with 86172 stars.
--&gt; Web-Dev-For-Beginners is a JavaScript repo with 84265 stars.
--&gt; django is a Python repo with 82042 stars.
--&gt; svelte is a JavaScript repo with 81055 stars.
--&gt; fastapi is a Python repo with 80172 stars.
--&gt; awesome-mac is a JavaScript repo with 79105 stars.
+<pre>Hello, Eric. You are 74.
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Common-Mistakes">Common Mistakes<a class="anchor-link" href="#Common-Mistakes">¶</a></h1><p>There are a few common errors that you’ll encounter when working with Strings and numbers. Remember, in Python program errors are called Exceptions. By going over what they are, you’ll be able to recognize them immediately.</p>
+<h2 id="Scenario-1:-Mismatched-string-quotes">Scenario 1: Mismatched string quotes<a class="anchor-link" href="#Scenario-1:-Mismatched-string-quotes">¶</a></h2><blockquote>
+<p>Mismatched string quotes will result in a SyntaxError</p>
+</blockquote>
+<p>When we try to start a String with one type of quote, and end with another, we’ll see a syntax error.</p>
+<p>For example, starting the string Hello with a double quote, and ending in a single quote, like this:</p>
+<h3 id="Input:-%E2%80%9CHello%E2%80%98">Input: “Hello‘<a class="anchor-link" href="#Input:-%E2%80%9CHello%E2%80%98">¶</a></h3><p>For example, in the REPL:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">name</span> <span class="o">=</span> <span class="s1">'Hello"</span>
+  <span class="n">File</span> <span class="s2">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">"Hello'</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">EOL</span> <span class="k">while</span> <span class="n">scanning</span> <span class="n">string</span> <span class="n">literal</span>
+</pre></div>
+<p>Solution: use matching quote types for defining your strings. Either single quotes 'Hello' or double quotes "Hello".</p>
+<h2 id="Scenario-2:-Trying-to-print-a-String-and-a-number-with-concatenation-using-the-%E2%80%9C+%E2%80%9D-symbol.">Scenario 2: Trying to print a String and a number with concatenation using the “+” symbol.<a class="anchor-link" href="#Scenario-2:-Trying-to-print-a-String-and-a-number-with-concatenation-using-the-%E2%80%9C+%E2%80%9D-symbol.">¶</a></h2><blockquote>
+<p>Trying to add or concatenate a String and a number will result in a TypeError</p>
+</blockquote>
+<p>If you add try to add (or concatenate) a String and a number, you’ll get an error saying that adding the two types together isn’t possible.</p>
+<h2 id="Input:-3-+-%E2%80%9CThree%E2%80%9D">Input: 3 + “Three”<a class="anchor-link" href="#Input:-3-+-%E2%80%9CThree%E2%80%9D">¶</a></h2><p>In the REPL:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="mi">3</span> <span class="o">+</span> <span class="s2">" Three"</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">"&lt;stdin&gt;"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="n">unsupported</span> <span class="n">operand</span> <span class="nb">type</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="o">+</span><span class="p">:</span> <span class="s1">'int'</span> <span class="ow">and</span> <span class="s1">'str'</span>
+</pre></div>
+<p>Solutions:</p>
+<p>There are two possible solutions here, for two different scenarios.</p>
+<p>In the first scenario, you’d like to add a number to a string via concatenation. In order to do that, you must first convert the number to a string via the str() method.</p>
+<p>In the REPL:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">my_num</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">my_num</span><span class="p">)</span> <span class="o">+</span> <span class="s2">" Three"</span><span class="p">)</span>
+<span class="mi">3</span> <span class="n">Three</span>
+</pre></div>
+<p>In the second scenario, you’d like to a convert a number that’s contained in a string (ex: "3") into an Integer, so you can use it like any other number. In this case, you’d like to convert it to an Integer, with the int() method.</p>
+<p>In the REPL:</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">str_num</span> <span class="o">=</span> <span class="s2">"3"</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">str_num</span><span class="p">)</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">8</span>
+</pre></div>
 </div>
 </div>
 </div>
