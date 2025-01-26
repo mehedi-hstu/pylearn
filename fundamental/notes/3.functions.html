@@ -4,7 +4,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>1.about</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>3.functions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7518,158 +7518,137 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="About-Python-%F0%9F%90%8D">About Python 🐍<a class="anchor-link" href="#About-Python-%F0%9F%90%8D">¶</a></h1><h2 id="What-is-Python?">What is Python?<a class="anchor-link" href="#What-is-Python?">¶</a></h2><p>Python is a programming language created by Guido Van Rossum in the late 1980s.</p>
-<p>You might be surprised to learn that Python is 30 years old!
-Where is it used?</p>
-<p>A common misconception is that Python is a scripting language. It’s used at companies from Reddit, to Netflix, to Dropbox.
-What’s all this about Python 2 vs Python 3</p>
-<p>This part is a bit of a stain on Python’s history. Python 3 was released 2008, and its adoption was slow. First and foremost because it took popular packages a fair amount of time to port over their code.</p>
-<p>This debate is now over. Python 2 will reach end-of-life in 2020, meaning that important updates - including security updates - will stop being released. That’s why this course focuses on Python3 only.
-Why Python?</p>
-<p>Python the language is open source.</p>
-<p>Python has a wide variety of applications such as:</p>
-<pre><code>AI/ML
-    SciPi
-    NumPy
-    Pandas
-    PyTorch
-Hardware &amp; Micro-controllers
-    Raspberry Pi
-    MicroPython
-    CircuitPython
-Web Development
-    Django
-    Flask
-Scripting
-    DevOps Configuration scripts</code></pre>
-<p>Python has an incredibly rich fully featured standard library, as well as the PyPI Package Index for 3rd party packages, which as of February 2019 contains 167,107 packages.</p>
-<p>Python is considered to be a “batteries included” language, because the standard library contains a majority of the libraries and packages you’ll need in a standard application.
-Continuing In The Community</p>
-<p>The absolute best part about Python is the incredibly supportive community.</p>
-<p>The biggest yearly conference is PyCon US with approximately 4000 attendees.</p>
-<p>There are many local user groups worldwide, with many listed on this wiki.</p>
-<p>There are many supportive groups for women and non-binary developers, such as PyLadies and DjangoGirls. These organizations have chapters in most major cities.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Conventions">Conventions<a class="anchor-link" href="#Conventions">¶</a></h2><h3 id="PEP8">PEP8<a class="anchor-link" href="#PEP8">¶</a></h3><p>PEP8 is a Python coding standard, that sets guidelines for how our Python code should look like.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Anatomy-of-a-Python-Program">Anatomy of a Python Program<a class="anchor-link" href="#Anatomy-of-a-Python-Program">¶</a></h2><p><a href="https://www.learnpython.dev/02-introduction-to-python/010-best-practices/01-anatomy-of-a-python-program/">Python program anatomy</a></p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="sd">"""</span>
-<span class="sd">A small Python program that uses the GitHub search API to list</span>
-<span class="sd">the top projects by language, based on stars.</span>
-<span class="sd">"""</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-
-<span class="n">GITHUB_API_URL</span> <span class="o">=</span> <span class="s2">"https://api.github.com/search/repositories"</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">create_query</span><span class="p">(</span><span class="n">languages</span><span class="p">,</span> <span class="n">min_stars</span><span class="o">=</span><span class="mi">50000</span><span class="p">):</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"stars:&gt;</span><span class="si">{</span><span class="n">min_stars</span><span class="si">}</span><span class="s2"> "</span>
-
-    <span class="k">for</span> <span class="n">language</span> <span class="ow">in</span> <span class="n">languages</span><span class="p">:</span>
-        <span class="n">query</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"language:</span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> "</span>
-
-    <span class="c1"># a sample query looks like: "stars:&gt;50 language:python language:javascript"</span>
-    <span class="k">return</span> <span class="n">query</span>
-
-
-<span class="k">def</span><span class="w"> </span><span class="nf">repos_with_most_stars</span><span class="p">(</span><span class="n">languages</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="s2">"stars"</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="s2">"desc"</span><span class="p">):</span>
-    <span class="n">query</span> <span class="o">=</span> <span class="n">create_query</span><span class="p">(</span><span class="n">languages</span><span class="p">)</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">"q"</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s2">"sort"</span><span class="p">:</span> <span class="n">sort</span><span class="p">,</span> <span class="s2">"order"</span><span class="p">:</span> <span class="n">order</span><span class="p">}</span>
-
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">GITHUB_API_URL</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
-    <span class="n">status_code</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
-
-    <span class="k">if</span> <span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">"An error occurred. HTTP Code: </span><span class="si">{</span><span class="n">status_code</span><span class="si">}</span><span class="s2">."</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">response_json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">response_json</span><span class="p">[</span><span class="s2">"items"</span><span class="p">]</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
-    <span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"python"</span><span class="p">,</span> <span class="s2">"javascript"</span><span class="p">,</span> <span class="s2">"ruby"</span><span class="p">]</span>
-    <span class="n">results</span> <span class="o">=</span> <span class="n">repos_with_most_stars</span><span class="p">(</span><span class="n">languages</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
-        <span class="n">language</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"language"</span><span class="p">]</span>
-        <span class="n">stars</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"stargazers_count"</span><span class="p">]</span>
-        <span class="n">name</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">"name"</span><span class="p">]</span>
-
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"-&gt; </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> is a </span><span class="si">{</span><span class="n">language</span><span class="si">}</span><span class="s2"> repo with </span><span class="si">{</span><span class="n">stars</span><span class="si">}</span><span class="s2"> stars."</span><span class="p">)</span>
+<h1 id="Functions">Functions<a class="anchor-link" href="#Functions">¶</a></h1><p>Defining Functions
+The purpose of functions in Python are to create reusable code. If we find ourselves copying and pasting the same code multiple times, that’s a good sign that a function might help!</p>
+<p>Anatomy of a function
+This is the recipe for defining a Python function:</p>
+<dl>
+<dt>def: the def keyword, telling Python we’re about to start a function definition</dt>
+<dt>a name for the function</dt>
+<dt>(: opening parenthesis</dt>
+<dt>(optional) the names of one or more arguments, separated with ,</dt>
+<dt>(optional) the names and values of one or more default arguments, separated with (,) note: we’ll see these in the next section</dt>
+<dt>) closing parenthesis</dt>
+<dd>a colon
+A function in Python is defined with the def keyword, followed by the function names, zero or more argument names contained in parenthesis (), and a colon : to indicate the start of the function.</dd>
+</dl>
+<p>The contents of the function then follow.</p>
+<p>Then, an optional return statement can follow, if the function plans on passing data back to the caller.</p>
+<div class="highlight"><pre><span></span><span class="c1"># A Basic Function that accepts no arguments and returns nothing.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>-&gt; public-apis is a Python repo with 325683 stars.
--&gt; system-design-primer is a Python repo with 287085 stars.
--&gt; awesome-python is a Python repo with 231672 stars.
--&gt; react is a JavaScript repo with 231666 stars.
--&gt; Python is a Python repo with 196732 stars.
--&gt; javascript-algorithms is a JavaScript repo with 189670 stars.
--&gt; bootstrap is a JavaScript repo with 171261 stars.
--&gt; AutoGPT is a Python repo with 170860 stars.
--&gt; Python-100-Days is a Python repo with 160165 stars.
--&gt; stable-diffusion-webui is a Python repo with 146375 stars.
--&gt; javascript is a JavaScript repo with 145904 stars.
--&gt; transformers is a Python repo with 138044 stars.
--&gt; youtube-dl is a Python repo with 133846 stars.
--&gt; next.js is a JavaScript repo with 128820 stars.
--&gt; 30-seconds-of-code is a JavaScript repo with 122437 stars.
--&gt; node is a JavaScript repo with 109151 stars.
--&gt; axios is a JavaScript repo with 106213 stars.
--&gt; three.js is a JavaScript repo with 104004 stars.
--&gt; create-react-app is a JavaScript repo with 103043 stars.
--&gt; yt-dlp is a Python repo with 97933 stars.
--&gt; HelloGitHub is a Python repo with 97809 stars.
--&gt; clean-code-javascript is a JavaScript repo with 92287 stars.
--&gt; thefuck is a Python repo with 89499 stars.
--&gt; iptv is a JavaScript repo with 89261 stars.
--&gt; pytorch is a Python repo with 86210 stars.
--&gt; Web-Dev-For-Beginners is a JavaScript repo with 84329 stars.
--&gt; django is a Python repo with 82057 stars.
--&gt; svelte is a JavaScript repo with 81069 stars.
--&gt; fastapi is a Python repo with 80206 stars.
--&gt; awesome-mac is a JavaScript repo with 79126 stars.
-</pre>
-</div>
+<div class="highlight"><pre><span></span><span class="c1"># A Function that accepts two arguments, and returns the value of</span>
+<span class="c1"># those numbers added together.</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+<p>If you forget the recipe while trying to create a function, Python will help you remember with a SyntaxError.</p>
+<p>For example, trying to create a function without the colon ::</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">()</span>
+</pre></div>
+<p>File "<stdin>", line 1
+def hello_world()
+^
+SyntaxError: invalid syntax
+And trying to create a function without the parenthesis ():</stdin></p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">:</span>
+</pre></div>
+<p>File "<stdin>", line 1
+def hello_world:
+^
+SyntaxError: invalid syntax
+Function Contents
+The recipe for function contents:</stdin></p>
+<p>a new line
+indentation (press tab on your keyboard)
+one or more lines
+(optional) a return statement
+return statement
+A return statement is a way to “short-circuit” the function.</p>
+<p>Using a return statement, you can optionally pass back data to the caller of your function.</p>
+<p>with no return statement
+If a function doesn’t have a return statement, it implicitly returns None.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">foo</span><span class="p">():</span>
+</pre></div>
+<p>...     x = 5
+...</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>val = foo()
+type(val)
+&lt;type 'NoneType'&gt;
+with a return statement, but no value
+If a function has a return statement, but no value, it also returns None. This is typically used to control the flow of a program.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">foo</span><span class="p">():</span>
+<span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">...</span>     <span class="k">return</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">val</span> <span class="o">=</span> <span class="n">foo</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+</pre></div>
+<p>&lt;type 'NoneType'&gt;
+with a return statement and a value
+To return a value from a function, just type it after the return statement. You can return anything from a Python function, including other functions! For today, we’ll focus on simple and complex data types.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">foo</span><span class="p">():</span>
+<span class="o">...</span>     <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">x</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">val</span> <span class="o">=</span> <span class="n">foo</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">val</span>
+</pre></div>
+<p>5
+As we explore simple functions, our return statements will usually be at the end of the function, but that’s not the only way they can be used. A function can have multiple return statements, and those return statements can be used to help control the flow of the program.</p>
+<p>Note: Because it’s syntactically correct to have multiple return statements in a function, it’s up to you to use them correctly. If you use a linter for your code files and you place additional code in a function after a return statement, the linter will give you a helpful hint about the rest of the code being unreachable.</p>
+<p>Indentation
+One of the most important aspects of functions is indentation. Remember, Python doesn’t use curly braces to figure out what’s inside a function like other languages you’ve seen like JavaScript or Java.</p>
+<p>Python knows what code is related to a function by how it’s indented. Anything that’s indented one level deep under the function declaration is part of the function, no matter how many spaces there are between lines.</p>
+<p>To add a level of indentation, just press the Tab key on your keyboard after entering a new line.</p>
+<p>If you’re using the REPL, once you’re done entering your function, you’ll need to press enter an additional time, to mark the end of the function. You know you’re done defining your function when you see the 3 input arrows &gt;&gt;&gt; again.</p>
+<p>Let’s try it together. Type the following code in your REPL. Note that the 3 dots ‘…’ indicate that those lines are indented in the REPL. If you type your code in a Python file, you won’t see the ... dots.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="o">...</span>
+ <span class="n">See</span> <span class="n">an</span> <span class="n">error</span><span class="err">?</span> <span class="n">Expand</span> <span class="n">this</span> <span class="n">section</span><span class="o">.</span>
+<span class="n">Calling</span> <span class="n">Functions</span>
+<span class="n">With</span> <span class="n">no</span> <span class="n">arguments</span>
+<span class="n">Once</span> <span class="n">you</span><span class="err">’</span><span class="n">ve</span> <span class="n">defined</span> <span class="n">a</span> <span class="n">function</span><span class="p">,</span> <span class="n">you</span> <span class="n">can</span> <span class="n">call</span> <span class="n">it</span> <span class="kn">from</span><span class="w"> </span><span class="nn">your</span> <span class="n">Python</span> <span class="n">code</span> <span class="k">as</span> <span class="n">many</span> <span class="n">times</span> <span class="k">as</span> <span class="n">you</span><span class="err">’</span><span class="n">d</span> <span class="n">like</span><span class="o">.</span>
+
+<span class="n">To</span> <span class="n">call</span> <span class="n">a</span> <span class="n">Python</span> <span class="n">function</span><span class="p">,</span> <span class="nb">type</span> <span class="ow">in</span> <span class="n">it</span><span class="err">’</span><span class="n">s</span> <span class="n">name</span><span class="p">,</span> <span class="n">along</span> <span class="k">with</span> <span class="n">parenthesis</span><span class="p">,</span> <span class="ow">and</span> <span class="nb">any</span> <span class="n">required</span> <span class="n">arguments</span> <span class="n">to</span> <span class="n">the</span> <span class="n">function</span><span class="o">.</span> <span class="n">Let</span><span class="err">’</span><span class="n">s</span> <span class="k">try</span> <span class="n">it</span> <span class="n">now</span><span class="p">,</span> <span class="k">with</span> <span class="n">a</span> <span class="n">function</span> <span class="n">that</span> <span class="n">doesn</span><span class="err">’</span><span class="n">t</span> <span class="n">require</span> <span class="n">arguments</span><span class="o">.</span>
+<span class="err">```</span><span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">():</span>
+<span class="o">...</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">hello_world</span><span class="p">()</span>
+<span class="n">Hello</span><span class="p">,</span> <span class="n">World</span><span class="err">!</span>
+<span class="n">With</span> <span class="n">arguments</span>
+<span class="n">Let</span><span class="err">’</span><span class="n">s</span> <span class="k">try</span> <span class="n">it</span> <span class="n">again</span><span class="p">,</span> <span class="n">this</span> <span class="n">time</span> <span class="k">with</span> <span class="n">a</span> <span class="n">function</span> <span class="n">that</span> <span class="n">does</span> <span class="n">accept</span> <span class="n">arguments</span><span class="o">.</span>
+
+<span class="n">Here</span><span class="p">,</span> <span class="n">note</span> <span class="n">that</span> <span class="n">the</span> <span class="n">function</span> <span class="n">accepts</span> <span class="n">names</span> <span class="k">for</span> <span class="n">the</span> <span class="n">arguments</span><span class="o">.</span> <span class="n">But</span><span class="p">,</span> <span class="n">when</span> <span class="n">we</span> <span class="n">call</span> <span class="n">the</span> <span class="n">function</span><span class="p">,</span> <span class="n">we</span><span class="err">’</span><span class="n">re</span> <span class="n">passing</span> <span class="ow">in</span> <span class="n">values</span><span class="o">.</span>
+<span class="err">```</span><span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="mi">8</span>
+<span class="o">&gt;&gt;&gt;</span>
+<span class="n">Storing</span> <span class="n">the</span> <span class="n">returned</span> <span class="n">value</span> <span class="n">of</span> <span class="n">a</span> <span class="n">function</span><span class="o">.</span>
+<span class="n">Storing</span> <span class="n">the</span> <span class="n">returned</span> <span class="n">value</span> <span class="n">of</span> <span class="n">a</span> <span class="n">function</span> <span class="ow">is</span> <span class="n">easy</span><span class="o">.</span> <span class="n">All</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">do</span> <span class="ow">is</span> <span class="n">assign</span> <span class="n">it</span> <span class="n">to</span> <span class="n">a</span> <span class="n">variable</span><span class="o">.</span>
+
+<span class="n">Let</span><span class="err">’</span><span class="n">s</span> <span class="k">try</span> <span class="n">it</span> <span class="n">now</span><span class="o">.</span>
+<span class="err">```</span><span class="n">python</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">def</span><span class="w"> </span><span class="nf">add_numbers</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="o">...</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">new_number</span> <span class="o">=</span> <span class="n">add_numbers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">new_number</span>
+<span class="mi">8</span>
+<span class="n">The</span> <span class="n">variable</span> <span class="n">new_number</span> <span class="n">now</span> <span class="n">contains</span> <span class="n">the</span> <span class="n">result</span> <span class="n">of</span> <span class="n">running</span> <span class="n">our</span> <span class="n">add_numbers</span> <span class="n">function</span> <span class="k">with</span> <span class="n">our</span> <span class="n">arguments</span> <span class="mi">3</span> <span class="ow">and</span> <span class="mf">5.</span>
+</pre></div>
 </div>
 </div>
 </div>
